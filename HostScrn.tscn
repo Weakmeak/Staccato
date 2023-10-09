@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1q1jjmievcto"]
+
+[sub_resource type="Theme" id="Theme_0t6m2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 29.0
+offset_right = 643.0
+offset_bottom = 55.0
+theme = SubResource("Theme_0t6m2")
+text = "You are the host!"
+scroll_active = false
+
+[node name="Console" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 84.0
+offset_right = 990.0
+offset_bottom = 480.0
+theme = SubResource("Theme_0t6m2")
+text = "Updates will be here"
+
+[node name="HostButton" type="Button" parent="."]
+offset_left = 434.0
+offset_top = 514.0
+offset_right = 668.0
+offset_bottom = 620.0
+text = "Send Question"

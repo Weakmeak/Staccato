@@ -1,3 +1,26 @@
 [gd_scene format=3 uid="uid://0ghvbhb5c3ho"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="HostButton" type="Button" parent="."]
+offset_left = 258.0
+offset_top = 266.0
+offset_right = 492.0
+offset_bottom = 372.0
+text = "Host Game"
+
+[node name="JoinButton" type="Button" parent="."]
+offset_left = 562.0
+offset_top = 264.0
+offset_right = 796.0
+offset_bottom = 370.0
+text = "Join Game"
+
+[node name="PlaceholderTitle" type="Label" parent="."]
+offset_left = 423.0
+offset_top = 197.0
+offset_right = 618.0
+offset_bottom = 223.0
+text = "Staccato Connection Test"

@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp5ph3x8410a3"]
+
+[sub_resource type="Theme" id="Theme_1cuqy"]
+
+[node name="Player Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="."]
+offset_right = 121.0
+offset_bottom = 38.0
+text = "<"
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 48.0
+
+[node name="TeamName" type="RichTextLabel" parent="CenterContainer2"]
+custom_minimum_size = Vector2(150, 25)
+layout_mode = 2
+theme = SubResource("Theme_1cuqy")
+text = "You are a player!"
+scroll_active = false

@@ -1,2 +1,10 @@
-Control
+ColorRect
+VSeparator
+CenterContainer
+HBoxContainer
+VBoxContainer
+HSeparator
 Button
+AspectRatioContainer
+Label
+Control

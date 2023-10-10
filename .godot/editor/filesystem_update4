@@ -1,2 +1,4 @@
-res://HostScrn.tscn
 res://Menu.tscn
+res://HostScrn.tscn
+res://PlayerScrn.tscn
+res://QuestionPrompt.tscn

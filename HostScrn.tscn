@@ -2,7 +2,7 @@
 
 [sub_resource type="Theme" id="Theme_14lo8"]
 
-[node name="Control" type="Control"]
+[node name="HostScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,11 +11,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Back" type="Button" parent="."]
+layout_mode = 0
 offset_right = 121.0
 offset_bottom = 38.0
 text = "<"
 
 [node name="Header" type="CenterContainer" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 48.0
 
@@ -27,6 +29,7 @@ text = "You are the host!"
 scroll_active = false
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
 offset_top = 48.0
 offset_right = 1152.0
 offset_bottom = 648.0

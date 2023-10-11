@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "hbqqV08OGTYUYVtcxDoUv4K7v9KIkHgsN8GdRU3WRYwQJhiDec2nF+R6TUNkbHWmWKdhr1sdh37oML6E1r8wsw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\CTibbett\\Documents\\School Files\\Capstone\\Staccato\\Staccato.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CTibbett\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

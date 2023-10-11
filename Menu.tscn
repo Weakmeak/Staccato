@@ -1,8 +1,13 @@
-[gd_scene format=3 uid="uid://0ghvbhb5c3ho"]
+[gd_scene load_steps=4 format=3 uid="uid://0ghvbhb5c3ho"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_u6nry"]
+[ext_resource type="PackedScene" uid="uid://b1q1jjmievcto" path="res://HostScrn.tscn" id="2_8ieja"]
+[ext_resource type="PackedScene" uid="uid://bp5ph3x8410a3" path="res://PlayerScrn.tscn" id="3_xjuff"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_u6nry")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 0
@@ -39,3 +44,14 @@ layout_mode = 2
 custom_minimum_size = Vector2(235, 105)
 layout_mode = 2
 text = "Join Game"
+
+[node name="HostScreen" parent="." instance=ExtResource("2_8ieja")]
+visible = false
+layout_mode = 1
+
+[node name="PlayerScreen" parent="." instance=ExtResource("3_xjuff")]
+visible = false
+layout_mode = 1
+
+[connection signal="button_down" from="CenterContainer/VBoxContainer/HBoxContainer/HostButton" to="." method="_on_host_button_down"]
+[connection signal="button_down" from="CenterContainer/VBoxContainer/HBoxContainer/JoinButton" to="." method="_on_join_button_down"]

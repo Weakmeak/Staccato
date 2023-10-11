@@ -1,4 +1,6 @@
 res://Menu.tscn
+res://MainMenu.cs
 res://HostScrn.tscn
 res://PlayerScrn.tscn
 res://QuestionPrompt.tscn
+res://MainMenu.gd

@@ -1,0 +1,17 @@
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.csproj.AssemblyReference.cache
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.AssemblyInfoInputs.cache
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.AssemblyInfo.cs
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.csproj.CoreCompileInputs.cache
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\Staccato.deps.json
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\Staccato.runtimeconfig.json
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\Staccato.dll
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\Staccato.pdb
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.csproj.CopyComplete
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.dll
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\refint\Staccato.dll
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.pdb
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.genruntimeconfig.cache
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\ref\Staccato.dll

@@ -1,57 +1,88 @@
-[gd_scene load_steps=4 format=3 uid="uid://0ghvbhb5c3ho"]
+[gd_scene load_steps=3 format=3 uid="uid://0ghvbhb5c3ho"]
 
 [ext_resource type="Script" path="res://MainMenu.gd" id="1_u6nry"]
-[ext_resource type="PackedScene" uid="uid://b1q1jjmievcto" path="res://HostScrn.tscn" id="2_8ieja"]
-[ext_resource type="PackedScene" uid="uid://bp5ph3x8410a3" path="res://PlayerScrn.tscn" id="3_xjuff"]
+
+[sub_resource type="Theme" id="Theme_ewmnm"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_u6nry")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="startButtons" type="CenterContainer" parent="."]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 647.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="startButtons"]
 layout_mode = 2
 
-[node name="PlaceholderTitle" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="PlaceholderTitle" type="Label" parent="startButtons/VBoxContainer"]
 custom_minimum_size = Vector2(195, 26)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Staccato Connection Test"
 
-[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer"]
+[node name="ColorRect" type="ColorRect" parent="startButtons/VBoxContainer"]
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
 color = Color(1, 1, 1, 0)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="startButtons/VBoxContainer"]
 layout_mode = 2
 
-[node name="HostButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+[node name="HostButton" type="Button" parent="startButtons/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(235, 105)
 layout_mode = 2
 text = "Host Game"
 
-[node name="VSeparator" type="VSeparator" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="startButtons/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
 
-[node name="JoinButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+[node name="JoinButton" type="Button" parent="startButtons/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(235, 105)
 layout_mode = 2
 text = "Join Game"
 
-[node name="HostScreen" parent="." instance=ExtResource("2_8ieja")]
+[node name="Header" type="CenterContainer" parent="."]
 visible = false
-layout_mode = 1
+offset_right = 1152.0
+offset_bottom = 70.0
 
-[node name="PlayerScreen" parent="." instance=ExtResource("3_xjuff")]
+[node name="headerText" type="RichTextLabel" parent="Header"]
+custom_minimum_size = Vector2(150, 25)
+layout_mode = 2
+theme = SubResource("Theme_ewmnm")
+scroll_active = false
+
+[node name="Back" type="Button" parent="."]
 visible = false
-layout_mode = 1
+custom_minimum_size = Vector2(100, 50)
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 110.0
+offset_bottom = 60.0
+text = "<"
 
-[connection signal="button_down" from="CenterContainer/VBoxContainer/HBoxContainer/HostButton" to="." method="_on_host_button_down"]
-[connection signal="button_down" from="CenterContainer/VBoxContainer/HBoxContainer/JoinButton" to="." method="_on_join_button_down"]
+[node name="hostScreen" type="CenterContainer" parent="."]
+visible = false
+offset_top = 48.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="SendButton" type="Button" parent="hostScreen"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Send Question"
+
+[node name="playerScreen" type="CenterContainer" parent="."]
+visible = false
+offset_top = 48.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[connection signal="button_down" from="startButtons/VBoxContainer/HBoxContainer/HostButton" to="." method="_on_host_button_down"]
+[connection signal="button_down" from="startButtons/VBoxContainer/HBoxContainer/JoinButton" to="." method="_on_join_button_down"]
+[connection signal="button_down" from="Back" to="." method="_on_back_button_down"]

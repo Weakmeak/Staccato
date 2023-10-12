@@ -12,10 +12,21 @@ func _process(delta: float) -> void:
 
 
 func _on_host_button_down() -> void:
-	$HostScreen.show()
-	$CenterContainer.hide()
+	$startButtons.hide()
+	$Header.show()
+	$Header/headerText.text = "You are the Host!"
+	$Back.show()
 
 
 func _on_join_button_down() -> void:
-	$PlayerScreen.show()
-	$CenterContainer.hide()
+	$startButtons.hide()
+	$Header.show()
+	$Header/headerText.text = "You are a player!"
+	$Back.show()
+
+
+func _on_back_button_down() -> void:
+	$startButtons.show()
+	$Header.hide()
+	$Header/headerText.text = " "
+	$Back.hide()

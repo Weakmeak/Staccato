@@ -1,4 +1,3 @@
 res://Menu.tscn
-res://HostScrn.tscn
-res://MainMenu.gd
+res://Stac_Theme.tres
 res://QuestionPrompt.tscn

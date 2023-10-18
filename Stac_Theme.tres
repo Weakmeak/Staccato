@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c0noysaoxkp14"]
+
+[ext_resource type="FontFile" uid="uid://c0gpt1oyaqdxb" path="res://Fonts/Montserrat-Medium.ttf" id="1_wqbpe"]
+
+[resource]
+default_font = ExtResource("1_wqbpe")

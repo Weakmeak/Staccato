@@ -1,13 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://0ghvbhb5c3ho"]
+[gd_scene load_steps=4 format=3 uid="uid://0ghvbhb5c3ho"]
 
 [ext_resource type="Script" path="res://MainMenu.gd" id="1_u6nry"]
-
-[sub_resource type="Theme" id="Theme_ewmnm"]
+[ext_resource type="FontFile" uid="uid://bp6l2ib5awynn" path="res://Fonts/Anders.ttf" id="2_rl8jb"]
+[ext_resource type="Theme" uid="uid://c0noysaoxkp14" path="res://Stac_Theme.tres" id="3_8hgdb"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_u6nry")
+
+[node name="BG_Color" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+color = Color(0.509804, 0.188235, 0.329412, 1)
 
 [node name="startButtons" type="CenterContainer" parent="."]
 layout_mode = 0
@@ -21,6 +27,10 @@ layout_mode = 2
 custom_minimum_size = Vector2(195, 26)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.901961, 0.576471, 0.333333, 1)
+theme_override_fonts/font = ExtResource("2_rl8jb")
+theme_override_font_sizes/font_size = 52
 text = "Staccato Connection Test"
 
 [node name="ColorRect" type="ColorRect" parent="startButtons/VBoxContainer"]
@@ -30,10 +40,12 @@ color = Color(1, 1, 1, 0)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="startButtons/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="HostButton" type="Button" parent="startButtons/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(235, 105)
 layout_mode = 2
+theme = ExtResource("3_8hgdb")
 text = "Host Game"
 
 [node name="VSeparator" type="VSeparator" parent="startButtons/VBoxContainer/HBoxContainer"]
@@ -43,42 +55,50 @@ layout_mode = 2
 [node name="JoinButton" type="Button" parent="startButtons/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(235, 105)
 layout_mode = 2
+theme = ExtResource("3_8hgdb")
 text = "Join Game"
 
 [node name="Header" type="CenterContainer" parent="."]
 visible = false
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 70.0
 
 [node name="headerText" type="RichTextLabel" parent="Header"]
 custom_minimum_size = Vector2(150, 25)
 layout_mode = 2
-theme = SubResource("Theme_ewmnm")
+theme = ExtResource("3_8hgdb")
 scroll_active = false
 
 [node name="Back" type="Button" parent="."]
 visible = false
 custom_minimum_size = Vector2(100, 50)
+layout_mode = 0
 offset_left = 10.0
 offset_top = 10.0
 offset_right = 110.0
 offset_bottom = 60.0
+theme = ExtResource("3_8hgdb")
 text = "<"
 
 [node name="hostScreen" type="CenterContainer" parent="."]
 visible = false
+layout_mode = 0
 offset_top = 48.0
 offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="SendButton" type="Button" parent="hostScreen"]
+visible = false
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("3_8hgdb")
 text = "Send Question"
 
 [node name="playerScreen" type="CenterContainer" parent="."]
 visible = false
+layout_mode = 0
 offset_top = 48.0
 offset_right = 1152.0
 offset_bottom = 648.0

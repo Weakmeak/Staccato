@@ -89,7 +89,6 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="SendButton" type="Button" parent="hostScreen"]
-visible = false
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -106,3 +105,4 @@ offset_bottom = 648.0
 [connection signal="button_down" from="startButtons/VBoxContainer/HBoxContainer/HostButton" to="." method="_on_host_button_down"]
 [connection signal="button_down" from="startButtons/VBoxContainer/HBoxContainer/JoinButton" to="." method="_on_join_button_down"]
 [connection signal="button_down" from="Back" to="." method="_on_back_button_down"]
+[connection signal="pressed" from="hostScreen/SendButton" to="." method="_on_send_button_pressed"]

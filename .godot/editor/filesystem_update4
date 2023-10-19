@@ -1,5 +1,4 @@
-res://Menu.tscn
-res://Stac_Theme.tres
-res://MainMenu.gd
 res://QuestionPrompt.tscn
-res://GameManager.gd
+res://Stac_Theme.tres
+res://Menu.tscn
+res://MainMenu.gd

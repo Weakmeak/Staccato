@@ -48,6 +48,8 @@ func _on_back_button_down() -> void:
 	$Back.hide()
 	
 	#peer.disconnect()
+	
+
 @rpc("any_peer", "call_local")
 func sendInfo(myID, name) -> void:
 	if(!GameManager.players.has(myID)):
@@ -86,7 +88,65 @@ func connected_to_server() -> void:
 func connection_failed() -> void:
 	print("Connected failed, we'll get 'em next time!")
 
-
 func _on_send_button_pressed() -> void:
 	for i in GameManager.players:
 		if i != 1: StartQuestion.rpc_id(i)
+
+func _on_file_search_button_pressed() -> void:
+	$FileDialog.popup()
+
+func _on_file_dialog_dir_selected(dir: String) -> void:
+	GameManager.songDirectory = dir 
+	$hostScreen/VBoxContainer/FilepathTestLabel.text = dir
+	dir_contents(dir)
+	#for i in GameManager.songPaths:
+		#print(GameManager.songPaths[i].path)
+	if (GameManager.songPaths.size() != 0): randSong()
+
+func dir_contents(path):
+	var dir = DirAccess.open(path)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			if dir.current_is_dir():
+				# print("Found directory: " + path + "/" + file_name)
+				dir_contents(path + "/" + file_name)
+			elif (file_name.ends_with(".mp3") || file_name.ends_with(".wav") || file_name.ends_with(".ogg")):
+				GameManager.songPaths[GameManager.songPaths.size()] = {
+					"path" = (path + "/" + file_name)
+				}
+			file_name = dir.get_next()
+	else:
+		print("An error occurred when trying to access the path.")
+
+func randSong():
+	var songID = randi_range(0, GameManager.songPaths.size())
+	
+	print("SONG CHOSEN")
+	print(GameManager.songPaths[songID].path)
+	$AudioStreamPlayer.stream = makeAudioStream(GameManager.songPaths[songID].path)
+	$AudioStreamPlayer.play()
+
+func makeAudioStream(path : String) -> AudioStream:
+	if path.ends_with(".mp3"):
+		var file = FileAccess.open(path, FileAccess.READ)
+		var sound = AudioStreamMP3.new()
+		sound.data = file.get_buffer(file.get_length())
+		return sound
+	elif path.ends_with(".ogg"):
+		var file = FileAccess.open(path, FileAccess.READ)
+		var sound = AudioStreamOggVorbis.new()
+		sound.data = file.get_buffer(file.get_length())
+		return sound
+	elif path.ends_with(".wav"):
+		var file = FileAccess.open(path, FileAccess.READ)
+		var sound = AudioStreamWAV.new()
+		sound.data = file.get_buffer(file.get_length())
+		return sound
+		
+	var file = FileAccess.open("res://fail.mp3", FileAccess.READ)
+	var sound = AudioStreamMP3.new()
+	sound.data = file.get_buffer(file.get_length())
+	return sound
+	push_error("Loaded file was not supported!")

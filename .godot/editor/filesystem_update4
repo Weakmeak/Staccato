@@ -2,3 +2,4 @@ res://QuestionPrompt.tscn
 res://Stac_Theme.tres
 res://Menu.tscn
 res://MainMenu.gd
+res://GameManager.gd

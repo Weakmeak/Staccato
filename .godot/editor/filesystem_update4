@@ -1,5 +1,7 @@
-res://QuestionPrompt.tscn
+res://Scenes/QuestionPrompt.tscn
+res://Classes/Answer.gd
+res://Classes/SongInfo.gd
 res://Stac_Theme.tres
-res://Menu.tscn
-res://MainMenu.gd
-res://GameManager.gd
+res://Scenes/Menu.tscn
+res://Scripts/QuestionPrompt.gd
+res://Scripts/GameManager.gd

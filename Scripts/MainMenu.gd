@@ -103,7 +103,7 @@ func _on_file_dialog_dir_selected(dir: String) -> void:
 	dir_contents(dir)
 	#for i in GameManager.songPaths:
 		#print(GameManager.songPaths[i].path)
-	if (GameManager.songPaths.size() != 0): randSong()
+	if (GameManager.songPaths.size() != 0): $hostScreen/VBoxContainer/HBoxContainer/PlayNewSong.visible = true
 
 func dir_contents(path):
 	var dir = DirAccess.open(path)
@@ -114,7 +114,7 @@ func dir_contents(path):
 			if dir.current_is_dir():
 				# print("Found directory: " + path + "/" + file_name)
 				dir_contents(path + "/" + file_name)
-			elif (file_name.ends_with(".mp3") || file_name.ends_with(".wav") || file_name.ends_with(".ogg")):
+			elif (file_name.ends_with(".mp3")):
 				GameManager.songPaths[GameManager.songPaths.size()] = {
 					"path" = (path + "/" + file_name)
 				}
@@ -123,28 +123,19 @@ func dir_contents(path):
 		print("An error occurred when trying to access the path.")
 
 func randSong():
-	var songID = randi_range(0, GameManager.songPaths.size())
+	var songID = randi_range(0, GameManager.songPaths.size() - 1)
 	
 	print("SONG CHOSEN")
 	print(GameManager.songPaths[songID].path)
+	$hostScreen/VBoxContainer/FilepathTestLabel.text = GameManager.songPaths[songID].path
+	$AudioStreamPlayer.stop()
 	$AudioStreamPlayer.stream = makeAudioStream(GameManager.songPaths[songID].path)
 	$AudioStreamPlayer.play()
 
 func makeAudioStream(path : String) -> AudioStream:
 	if path.ends_with(".mp3"):
-		var file = FileAccess.open(path, FileAccess.READ)
 		var sound = AudioStreamMP3.new()
-		sound.data = file.get_buffer(file.get_length())
-		return sound
-	elif path.ends_with(".ogg"):
-		var file = FileAccess.open(path, FileAccess.READ)
-		var sound = AudioStreamOggVorbis.new()
-		sound.data = file.get_buffer(file.get_length())
-		return sound
-	elif path.ends_with(".wav"):
-		var file = FileAccess.open(path, FileAccess.READ)
-		var sound = AudioStreamWAV.new()
-		sound.data = file.get_buffer(file.get_length())
+		sound.data = FileAccess.get_file_as_bytes(path)
 		return sound
 		
 	var file = FileAccess.open("res://fail.mp3", FileAccess.READ)
@@ -152,3 +143,7 @@ func makeAudioStream(path : String) -> AudioStream:
 	sound.data = file.get_buffer(file.get_length())
 	return sound
 	push_error("Loaded file was not supported!")
+
+
+func playNewSong() -> void:
+	randSong()

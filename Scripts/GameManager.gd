@@ -16,11 +16,10 @@ func _process(delta: float) -> void:
 	pass
 
 @rpc("any_peer", "call_local")
-func SendAnswer(myID: int, blah : String) -> void: 
-#	if(!Answers.has(myID)):
-#		Answers[myID] = {
-#			"ID" = myID,
-#			"Answer" = blah
-#		}
-	
-	var ans = Answer.new(blah, "art", "alb")
+func SendAnswer(myID: int, ttl : String, art : String, alb : String) -> void: 
+	var ans = Answer.new(ttl, art, alb)
+	if(!Answers.has(myID)):
+		Answers[myID] = {
+			"ID" = myID,
+			"Answer" = ans
+		}

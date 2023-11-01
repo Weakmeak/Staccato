@@ -32,4 +32,8 @@ func updateButtonState() -> void:
 
 func _on_answer_button_pressed() -> void:
 #	var ans : Answer = Answer.new(%Title.text, %Artist.text, %Album.text)
-	GameManager.SendAnswer.rpc_id(1, multiplayer.get_unique_id(), "WOOMY")
+	GameManager.SendAnswer.rpc_id(1, multiplayer.get_unique_id(), %Title.text, %Artist.text, %Album.text)
+
+
+func _on_timeout() -> void:
+	GameManager.SendAnswer.rpc_id(1, multiplayer.get_unique_id(), %Title.text, %Artist.text, %Album.text)

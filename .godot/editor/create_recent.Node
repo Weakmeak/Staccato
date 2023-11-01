@@ -1,11 +1,14 @@
-AudioStreamPlayer
 Label
+RichTextLabel
+CenterContainer
+TextureProgressBar
+Timer
+AudioStreamPlayer
 VBoxContainer
 FileDialog
 HBoxContainer
 ColorRect
 VSeparator
-CenterContainer
 HSeparator
 Button
 AspectRatioContainer

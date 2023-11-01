@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://vd2h1sieruw"]
+
+[ext_resource type="Script" path="res://Scripts/RadialTimer.gd" id="1_w1f38"]
+[ext_resource type="Texture2D" uid="uid://ckero0btl11ma" path="res://Textures/circle.svg" id="2_oh323"]
+[ext_resource type="Texture2D" uid="uid://cqbutq6l508jk" path="res://Textures/ring.svg" id="3_m0a00"]
+[ext_resource type="Theme" uid="uid://c0noysaoxkp14" path="res://Stac_Theme.tres" id="4_0gs45"]
+
+[node name="RadialTimer" type="Timer"]
+process_mode = 3
+one_shot = true
+script = ExtResource("1_w1f38")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_direction = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -116.0
+offset_top = 20.0
+offset_right = 76.0
+offset_bottom = 212.0
+grow_horizontal = 0
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 6
+size_flags_vertical = 2
+
+[node name="TimeWheel" type="TextureProgressBar" parent="CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+step = 0.0
+fill_mode = 5
+texture_under = ExtResource("2_oh323")
+texture_progress = ExtResource("3_m0a00")
+tint_under = Color(1, 1, 1, 0.113725)
+tint_over = Color(0.956863, 0.756863, 0.580392, 1)
+tint_progress = Color(0.956863, 0.756863, 0.580392, 1)
+
+[node name="TimeText" type="Label" parent="CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_0gs45")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 93
+text = "30"

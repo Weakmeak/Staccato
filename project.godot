@@ -18,6 +18,7 @@ config/icon="res://Textures/icon.svg"
 [autoload]
 
 GameManager="*res://Scripts/GameManager.gd"
+Connectron="*res://Scripts/Connectron.gd"
 
 [dotnet]
 

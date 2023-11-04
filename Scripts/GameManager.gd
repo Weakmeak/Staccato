@@ -56,16 +56,10 @@ func findSongs(path):
 	else:
 		print("An error occurred when trying to access the path.")
 
-func randSong():
-	var songID = randi_range(0, GameManager.songPaths.size() - 1)
+func randSong() -> String:
+	if GameManager.songPaths.size() > 0: return GameManager.songPaths.values().pick_random().path
+	else: return "NO SONGS"
 	
-	print("SONG CHOSEN")
-	print(GameManager.songPaths[songID].path)
-	$hostScreen/VBoxContainer/FilepathTestLabel.text = GameManager.songPaths[songID].path
-	$AudioStreamPlayer.stop()
-	$AudioStreamPlayer.stream = makeAudioStream(GameManager.songPaths[songID].path)
-	$AudioStreamPlayer.play()
-
 func makeAudioStream(path : String) -> AudioStream:
 	if path.ends_with(".mp3"):
 		var sound = AudioStreamMP3.new()

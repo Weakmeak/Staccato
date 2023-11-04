@@ -1,6 +1,14 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c0noysaoxkp14"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c0noysaoxkp14"]
 
 [ext_resource type="FontFile" uid="uid://c0gpt1oyaqdxb" path="res://Fonts/Montserrat-Medium.ttf" id="1_wqbpe"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5qbj"]
+bg_color = Color(0.956863, 0.756863, 0.580392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yk75w"]
+bg_color = Color(1, 1, 1, 1)
+
 [resource]
 default_font = ExtResource("1_wqbpe")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_y5qbj")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_yk75w")

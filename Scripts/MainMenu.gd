@@ -1,6 +1,7 @@
 extends Control
 
 var ansCount = 0
+const Question = preload("res://Scenes/Question.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -52,6 +53,10 @@ func _on_send_button_pressed() -> void:
 	GameManager.Answers.clear()
 	for i in GameManager.players:
 		if i != 1: StartQuestion.rpc_id(i)
+	$hostScreen.hide()
+	var q = Question.instantiate()
+	q.setup(15, 30, GameManager.randSong())
+	get_tree().root.add_child(q)
 
 func _on_file_search_button_pressed() -> void:
 	$FileDialog.popup()
@@ -60,4 +65,8 @@ func _on_file_dialog_dir_selected(dir: String) -> void:
 	GameManager.songDirectory = dir 
 	GameManager.findSongs(dir)
 	$hostScreen/VBoxContainer/FilepathTestLabel.text = str(GameManager.songPaths.size()) + " songs found"
-	if (GameManager.songPaths.size() != 0): $hostScreen/VBoxContainer/HBoxContainer/PlayNewSong.visible = true
+	if (GameManager.songPaths.size() != 0): $hostScreen/VBoxContainer/HBoxContainer/SendButton.disabled = false
+	
+func setHostState(state := true) -> void:
+	if state: $hostScreen.show()
+	else: $hostScreen.hide()

@@ -36,6 +36,9 @@ func _on_answer_button_pressed() -> void:
 func _on_timeout() -> void:
 	GameManager.SendAnswer.rpc_id(1, multiplayer.get_unique_id(), %Title.text, %Artist.text, %Album.text)
 	EXTERMINATE()
+	
+func set_timer(seconds : float) -> void:
+	$CenterContainer/RadialTimer.timeLimit = seconds
 
 func EXTERMINATE() -> void:
 	var root = get_tree().get_root()

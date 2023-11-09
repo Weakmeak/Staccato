@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqbutq6l508jk"
-path="res://.godot/imported/ring.svg-5f4c19871e6a10d56600a64fac0e2b49.ctex"
+uid="uid://dvq7bilb8ybe6"
+path="res://.godot/imported/music-note.svg-3d3ea16d26c770836f01e6b2f3bffc88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/ring.svg"
-dest_files=["res://.godot/imported/ring.svg-5f4c19871e6a10d56600a64fac0e2b49.ctex"]
+source_file="res://Textures/SVG/music-note.svg"
+dest_files=["res://.godot/imported/music-note.svg-3d3ea16d26c770836f01e6b2f3bffc88.ctex"]
 
 [params]
 

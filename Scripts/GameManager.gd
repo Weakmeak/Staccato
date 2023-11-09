@@ -2,9 +2,11 @@ extends Control
 
 var players = {}
 var songDirectory = ""
-var songPaths = {}
+var songPaths = []
 var Answers = {}
 var currSong
+
+signal answers_in
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,8 +14,9 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _process(_delta: float) -> void:
+	if Answers.size() == players.size():
+		answers_in.emit()
 
 @rpc("any_peer", "call_local")
 func SendAnswer(myID: int, ttl : String, art : String, alb : String) -> void: 
@@ -26,8 +29,9 @@ func SendAnswer(myID: int, ttl : String, art : String, alb : String) -> void:
 		
 
 @rpc("authority", "call_local")
-func StartQuestion() -> void:
+func StartQuestion(seconds : float) -> void:
 	var scene = load("res://Scenes/QuestionPrompt.tscn").instantiate()
+	scene.set_timer(seconds)
 	get_tree().root.add_child(scene)
 
 @rpc("any_peer", "call_local")
@@ -42,6 +46,7 @@ func sendInfo(myID, name) -> void:
 func findSongs(path):
 	var dir = DirAccess.open(path)
 	if dir:
+		songPaths.clear()
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
@@ -49,18 +54,17 @@ func findSongs(path):
 				# print("Found directory: " + path + "/" + file_name)
 				findSongs(path + "/" + file_name)
 			elif (file_name.ends_with(".mp3")):
-				GameManager.songPaths[GameManager.songPaths.size()] = {
-					"path" = (path + "/" + file_name)
-				}
+				GameManager.songPaths.push_back(path + "/" + file_name)
 			file_name = dir.get_next()
 	else:
 		print("An error occurred when trying to access the path.")
 
 func randSong() -> String:
-	if GameManager.songPaths.size() > 0: return GameManager.songPaths.values().pick_random().path
+	if GameManager.songPaths.size() > 0: return GameManager.songPaths.pick_random()
 	else: return "NO SONGS"
 	
 func makeAudioStream(path : String) -> AudioStream:
+	print("PATH RECEIVED: " + path)
 	if path.ends_with(".mp3"):
 		var sound = AudioStreamMP3.new()
 		sound.data = FileAccess.get_file_as_bytes(path)
@@ -72,5 +76,3 @@ func makeAudioStream(path : String) -> AudioStream:
 	return sound
 	push_error("Loaded file was not supported!")
 
-func playNewSong() -> void:
-	randSong()

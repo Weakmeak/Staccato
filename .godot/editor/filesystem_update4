@@ -1,9 +1,8 @@
-res://Scenes/Menu.tscn
+res://Scenes/ScoringBox.tscn
 res://Scripts/MainMenu.gd
-res://Scripts/RadialTimer.gd
-res://Stac_Theme.tres
 res://Scripts/Question.gd
+res://Stac_Theme.tres
+res://Scripts/RadialTimer.gd
 res://Scripts/QuestionPrompt.gd
-res://Scenes/Question.tscn
 res://Scenes/RadialTimer.tscn
-res://Scripts/GameManager.gd
+res://Scenes/AnswerChecker.tscn

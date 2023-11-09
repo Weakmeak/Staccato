@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://vd2h1sieruw"]
 
 [ext_resource type="Script" path="res://Scripts/RadialTimer.gd" id="1_w1f38"]
-[ext_resource type="Texture2D" uid="uid://ckero0btl11ma" path="res://Textures/circle.svg" id="2_oh323"]
-[ext_resource type="Texture2D" uid="uid://cqbutq6l508jk" path="res://Textures/ring.svg" id="3_m0a00"]
+[ext_resource type="Texture2D" uid="uid://ckero0btl11ma" path="res://Textures/SVG/circle.svg" id="2_r27df"]
+[ext_resource type="Texture2D" uid="uid://cqbutq6l508jk" path="res://Textures/SVG/ring.svg" id="3_wy86u"]
 [ext_resource type="Theme" uid="uid://c0noysaoxkp14" path="res://Stac_Theme.tres" id="4_0gs45"]
 
 [node name="RadialTimer" type="Timer"]
@@ -30,8 +30,8 @@ unique_name_in_owner = true
 layout_mode = 2
 step = 0.0
 fill_mode = 5
-texture_under = ExtResource("2_oh323")
-texture_progress = ExtResource("3_m0a00")
+texture_under = ExtResource("2_r27df")
+texture_progress = ExtResource("3_wy86u")
 tint_under = Color(1, 1, 1, 0.113725)
 tint_over = Color(0.956863, 0.756863, 0.580392, 1)
 tint_progress = Color(0.956863, 0.756863, 0.580392, 1)

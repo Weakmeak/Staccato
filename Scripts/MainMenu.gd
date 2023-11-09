@@ -43,19 +43,14 @@ func _on_back_button_down() -> void:
 	$Header/headerText.text = " "
 	$Back.hide()
 
-@rpc("authority", "call_local")
-func StartQuestion() -> void:
-	var scene = load("res://Scenes/QuestionPrompt.tscn").instantiate()
-	get_tree().root.add_child(scene)
-	print("Connected failed, we'll get 'em next time!")
 
 func _on_send_button_pressed() -> void:
 	GameManager.Answers.clear()
 	for i in GameManager.players:
-		if i != 1: StartQuestion.rpc_id(i)
+		if i != 1: GameManager.StartQuestion.rpc_id(i, 60)
 	$hostScreen.hide()
 	var q = Question.instantiate()
-	q.setup(15, 30, GameManager.randSong())
+	q.setup(30, 60)
 	get_tree().root.add_child(q)
 
 func _on_file_search_button_pressed() -> void:
@@ -67,6 +62,3 @@ func _on_file_dialog_dir_selected(dir: String) -> void:
 	$hostScreen/VBoxContainer/FilepathTestLabel.text = str(GameManager.songPaths.size()) + " songs found"
 	if (GameManager.songPaths.size() != 0): $hostScreen/VBoxContainer/HBoxContainer/SendButton.disabled = false
 	
-func setHostState(state := true) -> void:
-	if state: $hostScreen.show()
-	else: $hostScreen.hide()

@@ -1,0 +1,200 @@
+[gd_scene load_steps=11 format=3 uid="uid://b8xuyvaxtjitu"]
+
+[ext_resource type="Script" path="res://Scenes/AnswerChecker.gd" id="1_lnh64"]
+[ext_resource type="Theme" uid="uid://c0noysaoxkp14" path="res://Stac_Theme.tres" id="2_8ksf4"]
+[ext_resource type="Texture2D" uid="uid://dvq7bilb8ybe6" path="res://Textures/SVG/music-note.svg" id="3_2v48e"]
+[ext_resource type="Texture2D" uid="uid://d17csocwenysl" path="res://Textures/SVG/x-lg.svg" id="4_a147i"]
+[ext_resource type="Texture2D" uid="uid://dprgba6torwux" path="res://Textures/SVG/check-lg.svg" id="5_ov2h0"]
+[ext_resource type="Texture2D" uid="uid://cqq0rs5tmgo40" path="res://Textures/SVG/emoji-laughing-fill.svg" id="6_mjgy0"]
+[ext_resource type="Texture2D" uid="uid://dxwuedoywvf78" path="res://Textures/SVG/person-fill.svg" id="7_ygptg"]
+[ext_resource type="Texture2D" uid="uid://bydhfqwoxqb8j" path="res://Textures/SVG/vinyl-fill.svg" id="8_e0ks6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwrpu"]
+bg_color = Color(0.956863, 0.756863, 0.580392, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing_size = 1.2
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_st84x"]
+
+[node name="AnswerChecker" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lnh64")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 125.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hwrpu")
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 125.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/CenterContainer"]
+layout_mode = 2
+theme = ExtResource("2_8ksf4")
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_8ksf4")
+theme_override_colors/font_color = Color(0.443137, 0.168627, 0.301961, 1)
+text = "Player Name Goes Here"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleText" type="HBoxContainer" parent="Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Panel/CenterContainer/VBoxContainer/TitleText"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_2v48e")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/CenterContainer/VBoxContainer/TitleText"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme = ExtResource("2_8ksf4")
+theme_override_colors/font_color = Color(0.443137, 0.168627, 0.301961, 1)
+text = "Song"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Wrong" type="Button" parent="Panel/CenterContainer/VBoxContainer/TitleText"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+toggle_mode = true
+button_group = SubResource("ButtonGroup_st84x")
+icon = ExtResource("4_a147i")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Right" type="Button" parent="Panel/CenterContainer/VBoxContainer/TitleText"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_st84x")
+icon = ExtResource("5_ov2h0")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Funny" type="Button" parent="Panel/CenterContainer/VBoxContainer/TitleText"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_st84x")
+icon = ExtResource("6_mjgy0")
+icon_alignment = 1
+
+[node name="ArtistText" type="HBoxContainer" parent="Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Panel/CenterContainer/VBoxContainer/ArtistText"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_ygptg")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/CenterContainer/VBoxContainer/ArtistText"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme = ExtResource("2_8ksf4")
+theme_override_colors/font_color = Color(0.443137, 0.168627, 0.301961, 1)
+text = "Artist"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Wrong" type="Button" parent="Panel/CenterContainer/VBoxContainer/ArtistText"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+toggle_mode = true
+button_group = SubResource("ButtonGroup_st84x")
+icon = ExtResource("4_a147i")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Right" type="Button" parent="Panel/CenterContainer/VBoxContainer/ArtistText"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_st84x")
+icon = ExtResource("5_ov2h0")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Funny" type="Button" parent="Panel/CenterContainer/VBoxContainer/ArtistText"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_st84x")
+icon = ExtResource("6_mjgy0")
+icon_alignment = 1
+
+[node name="AlbumText" type="HBoxContainer" parent="Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Panel/CenterContainer/VBoxContainer/AlbumText"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("8_e0ks6")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/CenterContainer/VBoxContainer/AlbumText"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme = ExtResource("2_8ksf4")
+theme_override_colors/font_color = Color(0.443137, 0.168627, 0.301961, 1)
+text = "Album"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Wrong" type="Button" parent="Panel/CenterContainer/VBoxContainer/AlbumText"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+toggle_mode = true
+button_group = SubResource("ButtonGroup_st84x")
+icon = ExtResource("4_a147i")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Right" type="Button" parent="Panel/CenterContainer/VBoxContainer/AlbumText"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_st84x")
+icon = ExtResource("5_ov2h0")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Funny" type="Button" parent="Panel/CenterContainer/VBoxContainer/AlbumText"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_st84x")
+icon = ExtResource("6_mjgy0")
+icon_alignment = 1

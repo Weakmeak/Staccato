@@ -1,6 +1,13 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://c0noysaoxkp14"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://c0noysaoxkp14"]
 
 [ext_resource type="FontFile" uid="uid://c0gpt1oyaqdxb" path="res://Fonts/Montserrat-Medium.ttf" id="1_wqbpe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xv7w"]
+bg_color = Color(0.956863, 0.756863, 0.580392, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlk04"]
 bg_color = Color(1, 1, 1, 1)
@@ -17,6 +24,10 @@ bg_color = Color(1, 1, 1, 1)
 
 [resource]
 default_font = ExtResource("1_wqbpe")
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0.443137, 0.168627, 0.301961, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_2xv7w")
 Button/styles/normal = SubResource("StyleBoxFlat_dlk04")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_y5qbj")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_yk75w")

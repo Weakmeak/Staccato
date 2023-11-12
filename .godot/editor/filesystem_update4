@@ -1,8 +1,14 @@
-res://Scenes/ScoringBox.tscn
+res://Scenes/Menu.tscn
 res://Scripts/MainMenu.gd
 res://Scripts/Question.gd
 res://Stac_Theme.tres
 res://Scripts/RadialTimer.gd
 res://Scripts/QuestionPrompt.gd
+res://Scenes/Question.tscn
 res://Scenes/RadialTimer.tscn
+res://Scenes/QuestionPrompt.tscn
 res://Scenes/AnswerChecker.tscn
+res://Scenes/Answer.tscn
+res://Scripts/InfoGetter.cs
+res://Scripts/GameManager.gd
+res://Classes/SongData.gd

@@ -1,6 +1,6 @@
 is_global = true
 build_property.GodotDisabledSourceGenerators = 
-build_property.GodotProjectDir = C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\
+build_property.GodotProjectDir = C:\USERS\CTIBBETT\DOCUMENTS\SCHOOL FILES\CAPSTONE\STACCATO\
 build_property.GodotProjectDirBase64 = 
 build_property.GodotSourceGenerators = 
 build_property.IsGodotToolsProject = 
@@ -12,4 +12,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Staccato
-build_property.ProjectDir = C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\
+build_property.ProjectDir = C:\USERS\CTIBBETT\DOCUMENTS\SCHOOL FILES\CAPSTONE\STACCATO\

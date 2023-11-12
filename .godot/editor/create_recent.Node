@@ -1,11 +1,11 @@
-Button
-TextureRect
-CenterContainer
-Panel
-HBoxContainer
+ColorRect
 Label
 VBoxContainer
-ColorRect
+TextureRect
+HBoxContainer
+CenterContainer
+Button
+Panel
 ProgressBar
 RichTextLabel
 TextureProgressBar

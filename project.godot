@@ -19,6 +19,7 @@ config/icon="res://Textures/SVG/icon.svg"
 
 GameManager="*res://Scripts/GameManager.gd"
 Connectron="*res://Scripts/Connectron.gd"
+InfoGetter="*res://Scripts/InfoGetter.cs"
 
 [dotnet]
 

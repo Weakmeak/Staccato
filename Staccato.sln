@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Staccato", "Staccato.csproj", "{122A980D-4590-4032-8D3D-29D7B74B142C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Staccato", "Staccato.csproj", "{DBC8EEF9-60FE-48DA-9A85-4FC2F59894FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{122A980D-4590-4032-8D3D-29D7B74B142C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{122A980D-4590-4032-8D3D-29D7B74B142C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{122A980D-4590-4032-8D3D-29D7B74B142C}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{122A980D-4590-4032-8D3D-29D7B74B142C}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{122A980D-4590-4032-8D3D-29D7B74B142C}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{122A980D-4590-4032-8D3D-29D7B74B142C}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{DBC8EEF9-60FE-48DA-9A85-4FC2F59894FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC8EEF9-60FE-48DA-9A85-4FC2F59894FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC8EEF9-60FE-48DA-9A85-4FC2F59894FD}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{DBC8EEF9-60FE-48DA-9A85-4FC2F59894FD}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{DBC8EEF9-60FE-48DA-9A85-4FC2F59894FD}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{DBC8EEF9-60FE-48DA-9A85-4FC2F59894FD}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

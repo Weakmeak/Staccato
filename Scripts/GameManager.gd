@@ -64,7 +64,7 @@ func randSong() -> String:
 	else: return "NO SONGS"
 	
 func makeAudioStream(path : String) -> AudioStream:
-	print("PATH RECEIVED: " + path)
+#	print("PATH RECEIVED: " + path)
 	if path.ends_with(".mp3"):
 		var sound = AudioStreamMP3.new()
 		sound.data = FileAccess.get_file_as_bytes(path)

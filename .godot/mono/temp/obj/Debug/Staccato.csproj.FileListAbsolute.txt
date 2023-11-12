@@ -15,3 +15,4 @@ C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\
 C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.pdb
 C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.genruntimeconfig.cache
 C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\ref\Staccato.dll
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\TagLibSharp.dll

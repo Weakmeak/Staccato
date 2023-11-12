@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "hbqqV08OGTYUYVtcxDoUv4K7v9KIkHgsN8GdRU3WRYwQJhiDec2nF+R6TUNkbHWmWKdhr1sdh37oML6E1r8wsw==",
+  "dgSpecHash": "KCgxziDbozvzZ0KVYqGNrguJJLm+GKB3Umf38XcXs88U0OA/pMnPlq8QuoMgwZlUidNG2iUp4hgQafRxzuef7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CTibbett\\Documents\\School Files\\Capstone\\Staccato\\Staccato.csproj",
+  "projectFilePath": "C:\\USERS\\CTIBBETT\\DOCUMENTS\\SCHOOL FILES\\CAPSTONE\\STACCATO\\Staccato.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\CTibbett\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
-    "C:\\Users\\CTibbett\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
-    "C:\\Users\\CTibbett\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512"
+    "C:\\Users\\CTibbett\\.nuget\\packages\\godot.sourcegenerators\\4.2.0-dev.6\\godot.sourcegenerators.4.2.0-dev.6.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\godotsharp\\4.2.0-dev.6\\godotsharp.4.2.0-dev.6.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\godotsharpeditor\\4.2.0-dev.6\\godotsharpeditor.4.2.0-dev.6.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0-rc.2.23479.6\\microsoft.win32.systemevents.8.0.0-rc.2.23479.6.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\system.drawing.common\\8.0.0-rc.2.23479.14\\system.drawing.common.8.0.0-rc.2.23479.14.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\taglibsharp\\2.3.0\\taglibsharp.2.3.0.nupkg.sha512"
   ],
   "logs": []
 }

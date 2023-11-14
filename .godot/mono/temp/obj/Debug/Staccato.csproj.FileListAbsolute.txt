@@ -16,3 +16,8 @@ C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\
 C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\Staccato.genruntimeconfig.cache
 C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\obj\Debug\ref\Staccato.dll
 C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\TagLibSharp.dll
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\BitMiracle.LibTiff.NET.dll
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\IronSoftware.Drawing.Common.dll
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\SixLabors.Fonts.dll
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\SixLabors.ImageSharp.dll
+C:\Users\CTibbett\Documents\School Files\Capstone\Staccato\.godot\mono\temp\bin\Debug\SixLabors.ImageSharp.Drawing.dll

@@ -4,7 +4,7 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Drawing.Common" Version="8.0.0-rc.2.23479.14" />
+    <PackageReference Include="IronSoftware.System.Drawing" Version="2023.12.1" />
     <PackageReference Include="TagLibSharp" Version="2.3.0" />
   </ItemGroup>
   <ItemGroup>

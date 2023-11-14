@@ -1,10 +1,12 @@
 extends Control
 
+const SongData = preload("res://Classes/SongData.gd")
+
 var players = {}
 var songDirectory = ""
 var songPaths = []
 var Answers = {}
-var currSong
+var currSong : SongData
 
 signal answers_in
 
@@ -35,10 +37,10 @@ func StartQuestion(seconds : float) -> void:
 	get_tree().root.add_child(scene)
 
 @rpc("any_peer", "call_local")
-func sendInfo(myID, name) -> void:
+func sendInfo(myID, playerName) -> void:
 	if(!players.has(myID)):
 		players[myID] = {
-			"name" = name,
+			"name" = playerName,
 			"id" = myID,
 			"score" = 0
 		}
@@ -73,6 +75,5 @@ func makeAudioStream(path : String) -> AudioStream:
 	var file = FileAccess.open("res://fail.mp3", FileAccess.READ)
 	var sound = AudioStreamMP3.new()
 	sound.data = file.get_buffer(file.get_length())
-	return sound
 	push_error("Loaded file was not supported!")
-
+	return sound

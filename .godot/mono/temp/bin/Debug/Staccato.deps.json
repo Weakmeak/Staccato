@@ -1,0 +1,179 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Staccato/1.0.0": {
+        "dependencies": {
+          "Godot.SourceGenerators": "4.1.1",
+          "GodotSharp": "4.1.1",
+          "GodotSharpEditor": "4.1.1",
+          "IronSoftware.System.Drawing": "2023.12.1",
+          "TagLibSharp": "2.3.0"
+        },
+        "runtime": {
+          "Staccato.dll": {}
+        }
+      },
+      "BitMiracle.LibTiff.NET/2.4.649": {
+        "runtime": {
+          "lib/netstandard2.0/BitMiracle.LibTiff.NET.dll": {
+            "assemblyVersion": "2.4.649.0",
+            "fileVersion": "2.4.649.0"
+          }
+        }
+      },
+      "Godot.SourceGenerators/4.1.1": {},
+      "GodotSharp/4.1.1": {
+        "runtime": {
+          "lib/net6.0/GodotSharp.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.1.1.0"
+          }
+        }
+      },
+      "GodotSharpEditor/4.1.1": {
+        "dependencies": {
+          "GodotSharp": "4.1.1"
+        },
+        "runtime": {
+          "lib/net6.0/GodotSharpEditor.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.1.1.0"
+          }
+        }
+      },
+      "IronSoftware.System.Drawing/2023.12.1": {
+        "dependencies": {
+          "BitMiracle.LibTiff.NET": "2.4.649",
+          "SixLabors.ImageSharp": "3.0.2",
+          "SixLabors.ImageSharp.Drawing": "2.0.0",
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/net60/IronSoftware.Drawing.Common.dll": {
+            "assemblyVersion": "2023.12.0.1",
+            "fileVersion": "2023.12.0.1"
+          }
+        }
+      },
+      "SixLabors.Fonts/2.0.0": {
+        "runtime": {
+          "lib/net6.0/SixLabors.Fonts.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/3.0.2": {
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.2.0"
+          }
+        }
+      },
+      "SixLabors.ImageSharp.Drawing/2.0.0": {
+        "dependencies": {
+          "SixLabors.Fonts": "2.0.0",
+          "SixLabors.ImageSharp": "3.0.2"
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.Drawing.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "System.Memory/4.5.5": {},
+      "TagLibSharp/2.3.0": {
+        "runtime": {
+          "lib/netstandard2.0/TagLibSharp.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Staccato/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BitMiracle.LibTiff.NET/2.4.649": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XCEdfCphKo0UAvSg1h/OzOFWtjkIGnPMAziYkNqV7NVrqb/tZJTBxJhxIEX7gpvQwg8GIRYt133SUncfkKfjLA==",
+      "path": "bitmiracle.libtiff.net/2.4.649",
+      "hashPath": "bitmiracle.libtiff.net.2.4.649.nupkg.sha512"
+    },
+    "Godot.SourceGenerators/4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Kti3AjqGFT/myqAg87ykwoGAMrSUZkQaLdpZRWqvO0w2VhDtwUgEEKZk5HK94GzlWHOHZx2UW2fO88G7h56VgA==",
+      "path": "godot.sourcegenerators/4.1.1",
+      "hashPath": "godot.sourcegenerators.4.1.1.nupkg.sha512"
+    },
+    "GodotSharp/4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r07Z+O82m5dAqeJMYHDJCGdD0p1gb8vNVi+kIFYGjDNk39Ys3fgsm+x7ZpHEfNSW2oHTn62SCuCE38UAVy17MA==",
+      "path": "godotsharp/4.1.1",
+      "hashPath": "godotsharp.4.1.1.nupkg.sha512"
+    },
+    "GodotSharpEditor/4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t29ltWPBHhWDKncK2XFXmHx29jGOqtsR9PFdkjIcRWG5+PdcCJNrCng5cls/H+zGtluGF5L6rNBFbFlBBvTgkA==",
+      "path": "godotsharpeditor/4.1.1",
+      "hashPath": "godotsharpeditor.4.1.1.nupkg.sha512"
+    },
+    "IronSoftware.System.Drawing/2023.12.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X2byik3sa2jsJrQ4ktKQOpNW3PiblMPr+ivXR8h0BfxF+zeCy4E6wCJS5wwHKP5Z6BdyZbQHu/vmALhG2ZXwUA==",
+      "path": "ironsoftware.system.drawing/2023.12.1",
+      "hashPath": "ironsoftware.system.drawing.2023.12.1.nupkg.sha512"
+    },
+    "SixLabors.Fonts/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7kQOwkob8OBTmUWXGUBZuLvRC436IChLzXX0oF3ak+YqXwQDAs9MpuKdvujygcVhs8RyykBSpBpReCi5cQG+iA==",
+      "path": "sixlabors.fonts/2.0.0",
+      "hashPath": "sixlabors.fonts.2.0.0.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/3.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PlwUHnLZ67G1i0xXDYQJYbFiJsvXiEFWtKdV0QvY9j+dFasYbl+vWXXY42/asTsNjchsH5BLuoRzlf8Fa8lzpg==",
+      "path": "sixlabors.imagesharp/3.0.2",
+      "hashPath": "sixlabors.imagesharp.3.0.2.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp.Drawing/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6n7hOQUv7Cb7EnNI+RJpk/xdGbp5NI9/7TKN6zapLPv+TnbP8tsMl3iUWvmnEI7MiOsiD3fkGfYNbJUztVDcaA==",
+      "path": "sixlabors.imagesharp.drawing/2.0.0",
+      "hashPath": "sixlabors.imagesharp.drawing.2.0.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+      "path": "system.memory/4.5.5",
+      "hashPath": "system.memory.4.5.5.nupkg.sha512"
+    },
+    "TagLibSharp/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qo4z6ZjnIfbR3Us1Za5M2vQ97OWZPmODvVmepxZ8XW0UIVLGdO2T63/N3b23kCcyiwuIe0TQvMEQG8wUCCD1mA==",
+      "path": "taglibsharp/2.3.0",
+      "hashPath": "taglibsharp.2.3.0.nupkg.sha512"
+    }
+  }
+}

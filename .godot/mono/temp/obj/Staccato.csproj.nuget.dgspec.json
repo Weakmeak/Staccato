@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\USERS\\CTIBBETT\\DOCUMENTS\\SCHOOL FILES\\CAPSTONE\\STACCATO\\Staccato.csproj": {}
+    "C:\\Users\\CTibbett\\Documents\\School Files\\Capstone\\Staccato\\Staccato.csproj": {}
   },
   "projects": {
-    "C:\\USERS\\CTIBBETT\\DOCUMENTS\\SCHOOL FILES\\CAPSTONE\\STACCATO\\Staccato.csproj": {
+    "C:\\Users\\CTibbett\\Documents\\School Files\\Capstone\\Staccato\\Staccato.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\USERS\\CTIBBETT\\DOCUMENTS\\SCHOOL FILES\\CAPSTONE\\STACCATO\\Staccato.csproj",
+        "projectUniqueName": "C:\\Users\\CTibbett\\Documents\\School Files\\Capstone\\Staccato\\Staccato.csproj",
         "projectName": "Staccato",
-        "projectPath": "C:\\USERS\\CTIBBETT\\DOCUMENTS\\SCHOOL FILES\\CAPSTONE\\STACCATO\\Staccato.csproj",
+        "projectPath": "C:\\Users\\CTibbett\\Documents\\School Files\\Capstone\\Staccato\\Staccato.csproj",
         "packagesPath": "C:\\Users\\CTibbett\\.nuget\\packages\\",
-        "outputPath": "C:\\USERS\\CTIBBETT\\DOCUMENTS\\SCHOOL FILES\\CAPSTONE\\STACCATO\\.godot\\mono\\temp\\obj\\",
+        "outputPath": "C:\\Users\\CTibbett\\Documents\\School Files\\Capstone\\Staccato\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -47,19 +47,19 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.2.0-dev.6, )"
+              "version": "[4.1.1, )"
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.2.0-dev.6, )"
+              "version": "[4.1.1, )"
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.2.0-dev.6, )"
+              "version": "[4.1.1, )"
             },
-            "System.Drawing.Common": {
+            "IronSoftware.System.Drawing": {
               "target": "Package",
-              "version": "[8.0.0-rc.2.23479.14, )"
+              "version": "[2023.12.1, )"
             },
             "TagLibSharp": {
               "target": "Package",

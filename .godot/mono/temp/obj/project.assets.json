@@ -2,13 +2,26 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Godot.SourceGenerators/4.2.0-dev.6": {
+      "BitMiracle.LibTiff.NET/2.4.649": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BitMiracle.LibTiff.NET.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/BitMiracle.LibTiff.NET.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Godot.SourceGenerators/4.1.1": {
         "type": "package",
         "build": {
           "build/Godot.SourceGenerators.props": {}
         }
       },
-      "GodotSharp/4.2.0-dev.6": {
+      "GodotSharp/4.1.1": {
         "type": "package",
         "compile": {
           "lib/net6.0/GodotSharp.dll": {
@@ -21,10 +34,10 @@
           }
         }
       },
-      "GodotSharpEditor/4.2.0-dev.6": {
+      "GodotSharpEditor/4.1.1": {
         "type": "package",
         "dependencies": {
-          "GodotSharp": "4.2.0-dev.6"
+          "GodotSharp": "4.1.1"
         },
         "compile": {
           "lib/net6.0/GodotSharpEditor.dll": {
@@ -37,45 +50,78 @@
           }
         }
       },
-      "Microsoft.Win32.SystemEvents/8.0.0-rc.2.23479.6": {
+      "IronSoftware.System.Drawing/2023.12.1": {
         "type": "package",
+        "dependencies": {
+          "BitMiracle.LibTiff.NET": "2.4.649",
+          "SixLabors.ImageSharp": "3.0.2",
+          "SixLabors.ImageSharp.Drawing": "2.0.0",
+          "System.Memory": "4.5.5"
+        },
         "compile": {
-          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
-            "related": ".xml"
+          "lib/net60/IronSoftware.Drawing.Common.dll": {
+            "related": ".deps.json;.pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
-            "assetType": "runtime",
-            "rid": "win"
+          "lib/net60/IronSoftware.Drawing.Common.dll": {
+            "related": ".deps.json;.pdb;.xml"
           }
         }
       },
-      "System.Drawing.Common/8.0.0-rc.2.23479.14": {
+      "SixLabors.Fonts/2.0.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.Win32.SystemEvents": "8.0.0-rc.2.23479.6"
-        },
         "compile": {
-          "lib/net6.0/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/SixLabors.Fonts.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/SixLabors.Fonts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/_._": {}
+          "build/SixLabors.ImageSharp.props": {}
+        }
+      },
+      "SixLabors.ImageSharp.Drawing/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.Fonts": "2.0.0",
+          "SixLabors.ImageSharp": "3.0.2"
+        },
+        "compile": {
+          "lib/net6.0/SixLabors.ImageSharp.Drawing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.Drawing.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.5": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
         }
       },
       "TagLibSharp/2.3.0": {
@@ -94,118 +140,150 @@
     }
   },
   "libraries": {
-    "Godot.SourceGenerators/4.2.0-dev.6": {
-      "sha512": "fwTMhzvKF+YZazOAaar2+ds5Z2Sg5bZ19GilA01SW6hDsju3iLGH3fJcOO/qI0OwlDAlGgicjqNGu9oHI0zQEw==",
+    "BitMiracle.LibTiff.NET/2.4.649": {
+      "sha512": "XCEdfCphKo0UAvSg1h/OzOFWtjkIGnPMAziYkNqV7NVrqb/tZJTBxJhxIEX7gpvQwg8GIRYt133SUncfkKfjLA==",
       "type": "package",
-      "path": "godot.sourcegenerators/4.2.0-dev.6",
+      "path": "bitmiracle.libtiff.net/2.4.649",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bitmiracle.libtiff.net.2.4.649.nupkg.sha512",
+        "bitmiracle.libtiff.net.nuspec",
+        "lib/net40/BitMiracle.LibTiff.NET.dll",
+        "lib/net40/BitMiracle.LibTiff.NET.xml",
+        "lib/netstandard2.0/BitMiracle.LibTiff.NET.dll",
+        "lib/netstandard2.0/BitMiracle.LibTiff.NET.xml"
+      ]
+    },
+    "Godot.SourceGenerators/4.1.1": {
+      "sha512": "Kti3AjqGFT/myqAg87ykwoGAMrSUZkQaLdpZRWqvO0w2VhDtwUgEEKZk5HK94GzlWHOHZx2UW2fO88G7h56VgA==",
+      "type": "package",
+      "path": "godot.sourcegenerators/4.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/Godot.SourceGenerators.dll",
         "build/Godot.SourceGenerators.props",
-        "godot.sourcegenerators.4.2.0-dev.6.nupkg.sha512",
+        "godot.sourcegenerators.4.1.1.nupkg.sha512",
         "godot.sourcegenerators.nuspec"
       ]
     },
-    "GodotSharp/4.2.0-dev.6": {
-      "sha512": "zO1T0f2pXITu6qgs2ZYAQ/bfofUkSm3Q88/k2L6YR6zkjXiUAeTYzO2arJCuaicEf86fxcDXiamYqSlc/XfRpw==",
+    "GodotSharp/4.1.1": {
+      "sha512": "r07Z+O82m5dAqeJMYHDJCGdD0p1gb8vNVi+kIFYGjDNk39Ys3fgsm+x7ZpHEfNSW2oHTn62SCuCE38UAVy17MA==",
       "type": "package",
-      "path": "godotsharp/4.2.0-dev.6",
+      "path": "godotsharp/4.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "godotsharp.4.2.0-dev.6.nupkg.sha512",
+        "godotsharp.4.1.1.nupkg.sha512",
         "godotsharp.nuspec",
         "lib/net6.0/GodotSharp.dll",
         "lib/net6.0/GodotSharp.xml"
       ]
     },
-    "GodotSharpEditor/4.2.0-dev.6": {
-      "sha512": "FjKIxJna8c8nu6s/iGt7JTLixYkPx56kAaLBbyKlnsbVLiwEdVGgPQezKgCmklt3XFcm/gH+V28plvRx/rehtg==",
+    "GodotSharpEditor/4.1.1": {
+      "sha512": "t29ltWPBHhWDKncK2XFXmHx29jGOqtsR9PFdkjIcRWG5+PdcCJNrCng5cls/H+zGtluGF5L6rNBFbFlBBvTgkA==",
       "type": "package",
-      "path": "godotsharpeditor/4.2.0-dev.6",
+      "path": "godotsharpeditor/4.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "godotsharpeditor.4.2.0-dev.6.nupkg.sha512",
+        "godotsharpeditor.4.1.1.nupkg.sha512",
         "godotsharpeditor.nuspec",
         "lib/net6.0/GodotSharpEditor.dll",
         "lib/net6.0/GodotSharpEditor.xml"
       ]
     },
-    "Microsoft.Win32.SystemEvents/8.0.0-rc.2.23479.6": {
-      "sha512": "t83wew4bAz1UTsbLX8CQhJEY0+Q40xN1/yKJ0RL8Bphjk/KzK/jjc5+CdPnJGP4oLlTmo5p5jZp3NnrQ6V/cAw==",
+    "IronSoftware.System.Drawing/2023.12.1": {
+      "sha512": "X2byik3sa2jsJrQ4ktKQOpNW3PiblMPr+ivXR8h0BfxF+zeCy4E6wCJS5wwHKP5Z6BdyZbQHu/vmALhG2ZXwUA==",
       "type": "package",
-      "path": "microsoft.win32.systemevents/8.0.0-rc.2.23479.6",
+      "path": "ironsoftware.system.drawing/2023.12.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
-        "lib/net462/Microsoft.Win32.SystemEvents.dll",
-        "lib/net462/Microsoft.Win32.SystemEvents.xml",
-        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
-        "lib/net7.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/net7.0/Microsoft.Win32.SystemEvents.xml",
-        "lib/net8.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/net8.0/Microsoft.Win32.SystemEvents.xml",
-        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "microsoft.win32.systemevents.8.0.0-rc.2.23479.6.nupkg.sha512",
-        "microsoft.win32.systemevents.nuspec",
-        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
-        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.xml",
-        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
-        "useSharedDesignerContext.txt"
+        "LICENSE.txt",
+        "README.txt",
+        "docs/README.md",
+        "images/ironsoftware-logo.png",
+        "ironsoftware.system.drawing.2023.12.1.nupkg.sha512",
+        "ironsoftware.system.drawing.nuspec",
+        "lib/net60/IronSoftware.Drawing.Common.deps.json",
+        "lib/net60/IronSoftware.Drawing.Common.dll",
+        "lib/net60/IronSoftware.Drawing.Common.pdb",
+        "lib/net60/IronSoftware.Drawing.Common.xml",
+        "lib/netstandard2.0/IronSoftware.Drawing.Common.deps.json",
+        "lib/netstandard2.0/IronSoftware.Drawing.Common.dll",
+        "lib/netstandard2.0/IronSoftware.Drawing.Common.pdb",
+        "lib/netstandard2.0/IronSoftware.Drawing.Common.xml"
       ]
     },
-    "System.Drawing.Common/8.0.0-rc.2.23479.14": {
-      "sha512": "kdIRPl2+A6F6QxV48fF1dXvB2+K+5nDuKxhYydgT8X7HWpCnlr2CKptzyKMkXOGFAXOFsiNByr4LBWWLOqOfYA==",
+    "SixLabors.Fonts/2.0.0": {
+      "sha512": "7kQOwkob8OBTmUWXGUBZuLvRC436IChLzXX0oF3ak+YqXwQDAs9MpuKdvujygcVhs8RyykBSpBpReCi5cQG+iA==",
       "type": "package",
-      "path": "system.drawing.common/8.0.0-rc.2.23479.14",
+      "path": "sixlabors.fonts/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
+        "LICENSE",
+        "lib/net6.0/SixLabors.Fonts.dll",
+        "lib/net6.0/SixLabors.Fonts.xml",
+        "sixlabors.fonts.128.png",
+        "sixlabors.fonts.2.0.0.nupkg.sha512",
+        "sixlabors.fonts.nuspec"
+      ]
+    },
+    "SixLabors.ImageSharp/3.0.2": {
+      "sha512": "PlwUHnLZ67G1i0xXDYQJYbFiJsvXiEFWtKdV0QvY9j+dFasYbl+vWXXY42/asTsNjchsH5BLuoRzlf8Fa8lzpg==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/3.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "lib/net6.0/SixLabors.ImageSharp.dll",
+        "lib/net6.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.3.0.2.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
+    "SixLabors.ImageSharp.Drawing/2.0.0": {
+      "sha512": "6n7hOQUv7Cb7EnNI+RJpk/xdGbp5NI9/7TKN6zapLPv+TnbP8tsMl3iUWvmnEI7MiOsiD3fkGfYNbJUztVDcaA==",
+      "type": "package",
+      "path": "sixlabors.imagesharp.drawing/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/net6.0/SixLabors.ImageSharp.Drawing.dll",
+        "lib/net6.0/SixLabors.ImageSharp.Drawing.xml",
+        "sixlabors.imagesharp.drawing.128.png",
+        "sixlabors.imagesharp.drawing.2.0.0.nupkg.sha512",
+        "sixlabors.imagesharp.drawing.nuspec"
+      ]
+    },
+    "System.Memory/4.5.5": {
+      "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+      "type": "package",
+      "path": "system.memory/4.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Drawing.Common.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net462/System.Drawing.Common.dll",
-        "lib/net462/System.Drawing.Common.pdb",
-        "lib/net462/System.Drawing.Common.xml",
-        "lib/net6.0/System.Drawing.Common.dll",
-        "lib/net6.0/System.Drawing.Common.pdb",
-        "lib/net6.0/System.Drawing.Common.xml",
-        "lib/net7.0/System.Drawing.Common.dll",
-        "lib/net7.0/System.Drawing.Common.pdb",
-        "lib/net7.0/System.Drawing.Common.xml",
-        "lib/net8.0/System.Drawing.Common.dll",
-        "lib/net8.0/System.Drawing.Common.pdb",
-        "lib/net8.0/System.Drawing.Common.xml",
-        "lib/netstandard2.0/System.Drawing.Common.dll",
-        "lib/netstandard2.0/System.Drawing.Common.pdb",
-        "lib/netstandard2.0/System.Drawing.Common.xml",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "system.drawing.common.8.0.0-rc.2.23479.14.nupkg.sha512",
-        "system.drawing.common.nuspec",
-        "useSharedDesignerContext.txt"
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.5.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "TagLibSharp/2.3.0": {
@@ -228,10 +306,10 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Godot.SourceGenerators >= 4.2.0-dev.6",
-      "GodotSharp >= 4.2.0-dev.6",
-      "GodotSharpEditor >= 4.2.0-dev.6",
-      "System.Drawing.Common >= 8.0.0-rc.2.23479.14",
+      "Godot.SourceGenerators >= 4.1.1",
+      "GodotSharp >= 4.1.1",
+      "GodotSharpEditor >= 4.1.1",
+      "IronSoftware.System.Drawing >= 2023.12.1",
       "TagLibSharp >= 2.3.0"
     ]
   },
@@ -282,19 +360,19 @@
         "dependencies": {
           "Godot.SourceGenerators": {
             "target": "Package",
-            "version": "[4.2.0-dev.6, )"
+            "version": "[4.1.1, )"
           },
           "GodotSharp": {
             "target": "Package",
-            "version": "[4.2.0-dev.6, )"
+            "version": "[4.1.1, )"
           },
           "GodotSharpEditor": {
             "target": "Package",
-            "version": "[4.2.0-dev.6, )"
+            "version": "[4.1.1, )"
           },
-          "System.Drawing.Common": {
+          "IronSoftware.System.Drawing": {
             "target": "Package",
-            "version": "[8.0.0-rc.2.23479.14, )"
+            "version": "[2023.12.1, )"
           },
           "TagLibSharp": {
             "target": "Package",

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://b8xuyvaxtjitu"]
 
-[ext_resource type="Script" path="res://Scenes/AnswerChecker.gd" id="1_lnh64"]
+[ext_resource type="Script" path="res://Scripts/AnswerChecker.gd" id="1_bxt5d"]
 [ext_resource type="Theme" uid="uid://c0noysaoxkp14" path="res://Stac_Theme.tres" id="2_8ksf4"]
 [ext_resource type="Texture2D" uid="uid://dvq7bilb8ybe6" path="res://Textures/SVG/music-note.svg" id="3_2v48e"]
 [ext_resource type="Texture2D" uid="uid://d17csocwenysl" path="res://Textures/SVG/x-lg.svg" id="4_a147i"]
@@ -26,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_lnh64")
+script = ExtResource("1_bxt5d")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0

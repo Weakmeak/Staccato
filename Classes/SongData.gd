@@ -11,7 +11,15 @@ func setup(ttl : String, art : String, alb : String, tex : ImageTexture): # , te
 	artist = art
 	album = alb
 	albArt = tex
-	toConsole()
 
-func toConsole():
-	print("\n\n\n\n\n\n\n\n\nAMONG US")
+func getTitle() -> String:
+	return title
+
+func getArtist() -> String:
+	return artist
+	
+func getAlbum() -> String:
+	return album
+	
+func getArt() -> ImageTexture:
+	return albArt

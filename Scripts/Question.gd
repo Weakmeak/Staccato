@@ -1,9 +1,10 @@
 extends Control
 
+const reveal = preload("res://Scenes/AnswerReveal.tscn")
+
 var cliplength : float
 var questionLength : float
 var songPath : String
-var songMetadata 
 
 var playStart : float
 var playEnd : float
@@ -18,7 +19,7 @@ func setup(clipLen, qLen) -> void:
 	var s : String = GameManager.randSong()
 	if (s != "NO SONGS"):
 		songPath = s
-		InfoGetter.GetInfo(songPath)
+		GameManager.currSong = InfoGetter.GetInfo(songPath)
 		var aStre = GameManager.makeAudioStream(songPath)
 		if aStre.get_length() < cliplength: 
 			playStart = 0
@@ -62,13 +63,17 @@ func _process(_delta: float) -> void:
 
 func EXTERMINATE() -> void:
 #	await 
+	var q = reveal.instantiate()
+	q.setup()
+	get_tree().root.add_child(q)
+	
 	var root = get_tree().get_root()
 	$"../Main Menu/hostScreen".show()
 	root.remove_child(self)
 	self.call_deferred("free")
 
 func answered() -> void:
-	print("GOT IT")
+#	print("GOT IT")
 	done = true
 
 func _on_timeout() -> void:

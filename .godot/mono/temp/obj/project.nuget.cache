@@ -1,14 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "KCgxziDbozvzZ0KVYqGNrguJJLm+GKB3Umf38XcXs88U0OA/pMnPlq8QuoMgwZlUidNG2iUp4hgQafRxzuef7w==",
+  "dgSpecHash": "YzB12lQLdS7yYF9Sgm63Qsn0i8fx8TQYfACFWj5hgDCXDmRSzAgtvJDyh/rrLjuv0ijdPjx8cz89OdlecU8Eug==",
   "success": true,
-  "projectFilePath": "C:\\USERS\\CTIBBETT\\DOCUMENTS\\SCHOOL FILES\\CAPSTONE\\STACCATO\\Staccato.csproj",
+  "projectFilePath": "C:\\Users\\CTibbett\\Documents\\School Files\\Capstone\\Staccato\\Staccato.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\CTibbett\\.nuget\\packages\\godot.sourcegenerators\\4.2.0-dev.6\\godot.sourcegenerators.4.2.0-dev.6.nupkg.sha512",
-    "C:\\Users\\CTibbett\\.nuget\\packages\\godotsharp\\4.2.0-dev.6\\godotsharp.4.2.0-dev.6.nupkg.sha512",
-    "C:\\Users\\CTibbett\\.nuget\\packages\\godotsharpeditor\\4.2.0-dev.6\\godotsharpeditor.4.2.0-dev.6.nupkg.sha512",
-    "C:\\Users\\CTibbett\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0-rc.2.23479.6\\microsoft.win32.systemevents.8.0.0-rc.2.23479.6.nupkg.sha512",
-    "C:\\Users\\CTibbett\\.nuget\\packages\\system.drawing.common\\8.0.0-rc.2.23479.14\\system.drawing.common.8.0.0-rc.2.23479.14.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\bitmiracle.libtiff.net\\2.4.649\\bitmiracle.libtiff.net.2.4.649.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\ironsoftware.system.drawing\\2023.12.1\\ironsoftware.system.drawing.2023.12.1.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\sixlabors.fonts\\2.0.0\\sixlabors.fonts.2.0.0.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\sixlabors.imagesharp\\3.0.2\\sixlabors.imagesharp.3.0.2.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\sixlabors.imagesharp.drawing\\2.0.0\\sixlabors.imagesharp.drawing.2.0.0.nupkg.sha512",
+    "C:\\Users\\CTibbett\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\CTibbett\\.nuget\\packages\\taglibsharp\\2.3.0\\taglibsharp.2.3.0.nupkg.sha512"
   ],
   "logs": []

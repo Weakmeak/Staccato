@@ -1,10 +1,11 @@
 extends Control
 
 func setup():
-	%TITLE.text = GameManager.currSong.title
-	%ARTIST.text = GameManager.currSong.artist
-	%ALBUM.text = GameManager.currSong.album
-	%AlbArt.texture = GameManager.currsong.getArt()
+	var temp = GameManager.currSong
+	%TITLE.text = temp.title
+	%ARTIST.text = temp.artist
+	%ALBUM.text = temp.album
+	%AlbArt.texture = temp.albArt
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

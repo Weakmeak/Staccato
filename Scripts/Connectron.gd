@@ -45,7 +45,7 @@ func peer_disconnected(id) -> void:
 #called on CLIENT ONLY
 func connected_to_server() -> void:
 	print("Connected to server!")
-	GameManager.sendInfo.rpc_id(1, multiplayer.get_unique_id(), "name")
+	GameManager.sendInfo.rpc_id(1, multiplayer.get_unique_id(), "Player " + str(multiplayer.get_unique_id()))
 
 #called on CLIENT ONLY
 func connection_failed() -> void:

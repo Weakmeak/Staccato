@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6cdikpgvklnr"]
+[gd_scene load_steps=7 format=3 uid="uid://c6cdikpgvklnr"]
 
 [ext_resource type="Theme" uid="uid://c0noysaoxkp14" path="res://Stac_Theme.tres" id="1_mtjum"]
 [ext_resource type="Script" path="res://Scripts/AnswerReveal.gd" id="1_pn80q"]
+[ext_resource type="AudioStream" uid="uid://byj1v815y4i3i" path="res://Sounds/Drumroll.mp3" id="3_glwyf"]
+[ext_resource type="AudioStream" uid="uid://dteaqmahgyuhr" path="res://Sounds/Crash.wav" id="4_ayigm"]
 
 [sub_resource type="Gradient" id="Gradient_yy6qw"]
 colors = PackedColorArray(0.208712, 0.0617179, 0.1334, 1, 0.956863, 0.756863, 0.580392, 1)
@@ -10,7 +12,7 @@ colors = PackedColorArray(0.208712, 0.0617179, 0.1334, 1, 0.956863, 0.756863, 0.
 gradient = SubResource("Gradient_yy6qw")
 fill_from = Vector2(0, 1)
 
-[node name="Control" type="Control"]
+[node name="Reveal" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,7 +21,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pn80q")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="Answer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 400)
 layout_mode = 1
 anchors_preset = 8
@@ -27,15 +30,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -451.0
+offset_left = -466.5
 offset_top = -200.0
-offset_right = 451.0
+offset_right = 466.5
 offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="AlbArt" type="TextureRect" parent="HBoxContainer"]
+[node name="AlbArt" type="TextureRect" parent="Answer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
@@ -44,66 +47,116 @@ texture = SubResource("GradientTexture2D_ea85f")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+[node name="ColorRect" type="ColorRect" parent="Answer"]
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
 color = Color(1, 1, 1, 0)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Answer"]
 layout_mode = 2
 alignment = 1
 
-[node name="anslab1" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="anslab1" type="Label" parent="Answer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_mtjum")
 theme_override_font_sizes/font_size = 24
 text = "Song:"
 horizontal_alignment = 1
 
-[node name="TITLE" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="TITLE" type="Label" parent="Answer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 5
 theme = ExtResource("1_mtjum")
 theme_override_font_sizes/font_size = 36
 text = "The Perfect Drug"
 horizontal_alignment = 1
+text_overrun_behavior = 3
 
-[node name="anslab2" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="anslab2" type="Label" parent="Answer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_mtjum")
 theme_override_font_sizes/font_size = 24
 text = "Artist:"
 horizontal_alignment = 1
 
-[node name="ARTIST" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="ARTIST" type="Label" parent="Answer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 5
 theme = ExtResource("1_mtjum")
 theme_override_font_sizes/font_size = 36
 text = "Nine Inch Nails"
 horizontal_alignment = 1
+text_overrun_behavior = 3
 
-[node name="anslab3" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="anslab3" type="Label" parent="Answer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_mtjum")
 theme_override_font_sizes/font_size = 24
 text = "Album:"
 horizontal_alignment = 1
 
-[node name="ALBUM" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="ALBUM" type="Label" parent="Answer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 5
 theme = ExtResource("1_mtjum")
 theme_override_font_sizes/font_size = 36
 text = "Lost Highway Soundtrack"
 horizontal_alignment = 1
+text_overrun_behavior = 3
 
-[node name="Label" type="Label" parent="."]
+[node name="ColorRect" type="ColorRect" parent="Answer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-offset_left = 454.0
-offset_top = 302.0
-offset_right = 697.0
-offset_bottom = 345.0
+color = Color(1, 1, 1, 0)
+
+[node name="Leadup" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.5
+offset_top = -21.5
+offset_right = 121.5
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_mtjum")
 theme_override_font_sizes/font_size = 32
 text = "The answer is..."
+
+[node name="Drumroll" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_glwyf")
+autoplay = true
+
+[node name="Crash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ayigm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
+
+[node name="Next" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -62.5
+offset_top = -78.0
+offset_right = 62.5
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_mtjum")
+text = "Next"
+
+[connection signal="finished" from="Drumroll" to="." method="_on_drumroll_end"]
+[connection signal="timeout" from="Timer" to="." method="_after_delay"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

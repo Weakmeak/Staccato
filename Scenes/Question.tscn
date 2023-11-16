@@ -38,7 +38,22 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Spacer" type="ColorRect" parent="niceifier/VBoxContainer"]
-custom_minimum_size = Vector2(0, 35)
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="PlayerCheck" type="Label" parent="niceifier/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_654dy")
+theme_override_font_sizes/font_size = 30
+text = "0/0 Answers Received"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 33
+
+[node name="Spacer2" type="ColorRect" parent="niceifier/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 color = Color(1, 1, 1, 0)
 

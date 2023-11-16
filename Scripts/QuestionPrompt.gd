@@ -24,9 +24,9 @@ func _on_album_text_changed(_new_text: String) -> void:
 func updateButtonState() -> void:
 	var ttl_Len = %Title.text.length()
 	var art_Len = %Artist.text.length()
-	var alb_Len = %Album.text.length()
+#	var alb_Len = %Album.text.length()
 	
-	%AnswerButton.disabled = !(ttl_Len > 0 && art_Len > 0 && alb_Len > 0)
+	%AnswerButton.disabled = !(ttl_Len > 0 && art_Len > 0)
 
 func _on_answer_button_pressed() -> void:
 #	var ans : Answer = Answer.new(%Title.text, %Artist.text, %Album.text)

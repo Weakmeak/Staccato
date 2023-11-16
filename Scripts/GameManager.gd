@@ -8,17 +8,20 @@ var songPaths = []
 var Answers = {}
 var currSong : SongData
 
+var playCount: int:
+	get:
+		return players.size()
+
 signal answers_in
+signal answer_recieved
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
+func _ready():
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Answers.size() == players.size():
-		answers_in.emit()
+	pass
 
 @rpc("any_peer", "call_local")
 func SendAnswer(myID: int, ttl : String, art : String, alb : String) -> void: 
@@ -28,6 +31,11 @@ func SendAnswer(myID: int, ttl : String, art : String, alb : String) -> void:
 			"ID" = myID,
 			"Answer" = ans
 		}
+		
+		answer_recieved.emit(Answers.size(), players.size())
+		
+		if Answers.size() == players.size():
+			answers_in.emit()
 		
 
 @rpc("authority", "call_local")
@@ -44,6 +52,11 @@ func sendInfo(myID, playerName) -> void:
 			"id" = myID,
 			"score" = 0
 		}
+		
+func getName(playID : int) -> String:
+	if(players.has(playID)): return players[playID].name
+	else: 
+		return "MissingNo"
 
 func findSongs(path):
 	var dir = DirAccess.open(path)
@@ -77,3 +90,7 @@ func makeAudioStream(path : String) -> AudioStream:
 	sound.data = file.get_buffer(file.get_length())
 	push_error("Loaded file was not supported!")
 	return sound
+
+func callScene(source: String):
+	var scene = load(source).instantiate()
+	get_tree().root.add_child(scene)

@@ -36,12 +36,23 @@ func setup(clipLen, qLen) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	%PlayerCheck.text = "0/" + str(GameManager.playCount)  + " Answers"
 	GameManager.answers_in.connect(answered)
+	GameManager.answer_recieved.connect(updateCount)
 	$Juke.play(playStart)
 	targetPitch = 1
 #	print(songPath.split("/")[-1])
+	for i in GameManager.players:
+			if i != 1: GameManager.StartQuestion.rpc_id(i, 60)
 	
 
+func updateCount(ans : int, play : int):
+	var t = create_tween()
+	t.set_ease(Tween.EASE_OUT)
+	t.set_trans(Tween.TRANS_QUINT)
+	%PlayerCheck.add_theme_color_override("font_color", Color.from_string("#44CF6B", Color.GREEN))
+	%PlayerCheck.text = str(ans) + "/" + str(play)  + " Answers"
+	t.tween_property(%PlayerCheck, "theme_override_colors/font_color", Color.WHITE, .5)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -68,7 +79,7 @@ func EXTERMINATE() -> void:
 	get_tree().root.add_child(q)
 	
 	var root = get_tree().get_root()
-	$"../Main Menu/hostScreen".show()
+#	$"../Main Menu/hostScreen".show()
 	root.remove_child(self)
 	self.call_deferred("free")
 

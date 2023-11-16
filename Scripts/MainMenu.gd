@@ -46,8 +46,6 @@ func _on_back_button_down() -> void:
 
 func _on_send_button_pressed() -> void:
 	GameManager.Answers.clear()
-	for i in GameManager.players:
-		if i != 1: GameManager.StartQuestion.rpc_id(i, 60)
 	$hostScreen.hide()
 	var q = Question.instantiate()
 	q.setup(30, 60)

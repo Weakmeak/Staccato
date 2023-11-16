@@ -1,13 +1,17 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://c0noysaoxkp14"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c0noysaoxkp14"]
 
 [ext_resource type="FontFile" uid="uid://c0gpt1oyaqdxb" path="res://Fonts/Montserrat-Medium.ttf" id="1_wqbpe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xv7w"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
 bg_color = Color(0.956863, 0.756863, 0.580392, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlk04"]
 bg_color = Color(1, 1, 1, 1)
@@ -15,6 +19,17 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk0ab"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.79, 0.0711, 0.418569, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5qbj"]
 bg_color = Color(0.956863, 0.756863, 0.580392, 1)
@@ -29,5 +44,7 @@ Button/colors/font_focus_color = Color(0.443137, 0.168627, 0.301961, 1)
 Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 Button/styles/focus = SubResource("StyleBoxFlat_2xv7w")
 Button/styles/normal = SubResource("StyleBoxFlat_dlk04")
+Button/styles/pressed = SubResource("StyleBoxFlat_kk0ab")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_2xv7w")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_y5qbj")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_yk75w")

@@ -1,12 +1,5 @@
-res://Scenes/Scoring.tscn
 res://Scripts/MainMenu.gd
 res://Scripts/Question.gd
 res://Stac_Theme.tres
 res://Scripts/RadialTimer.gd
 res://Scripts/QuestionPrompt.gd
-res://Scripts/ScoringScreen.gd
-res://Scenes/Menu.tscn
-res://Scripts/AnswerChecker.gd
-res://Scenes/AnswerChecker.tscn
-res://Scripts/Connectron.gd
-res://Scenes/QuestionPrompt.tscn
